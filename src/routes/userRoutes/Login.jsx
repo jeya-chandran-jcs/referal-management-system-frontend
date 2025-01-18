@@ -71,8 +71,8 @@ export default function Login(){
                 </form>
             </div>
             <div className="d-flex justify-content-between">
-                <Link to="/user/register" className="text-info ">Register</Link>
-                <Link to="/user/forgot-password" className="text-info">forgot password?</Link>
+                <p className="text-info text-underline " onClick={()=>navigate("/user/register")}>Register</p>
+                <p  className="text-info text-underline" onClick={()=>navigate("/user/forget-password")}>forgot password?</p>
             </div>
         </div>        
     </div>

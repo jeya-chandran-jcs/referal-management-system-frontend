@@ -42,7 +42,7 @@ export default function ForgetPassword(){
                     </form>
                 </div>
                 <div className="text-start mt-3">
-                <Link className="text-primary " to="/login">SignIn</Link>
+                <p className="text-primary text-underline" onClick={()=>navigate("/user/login")}>SignIn</p>
                 </div>
             </div>
         </div>
