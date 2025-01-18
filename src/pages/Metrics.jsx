@@ -40,7 +40,7 @@ const MetricDashboard = () => {
     try {
       await axios.put(
         `${API}metrics/reset`,
-        {}, // Empty body for the PUT request
+        {}, 
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -49,7 +49,7 @@ const MetricDashboard = () => {
         }
       );
       alert("Candidates' statuses reset successfully.");
-      fetchMetrics(); // Refresh the metrics after resetting
+      fetchMetrics(); 
     } catch (err) {
       console.error("Failed to reset candidate statuses:", err);
     }

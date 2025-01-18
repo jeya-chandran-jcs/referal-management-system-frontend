@@ -38,7 +38,7 @@ const ReferralForm = () => {
         }
       );
       alert("Referral added successfully!");
-      navigate("/"); // Redirect to the homepage
+      navigate("/"); 
     } catch (err) {
       console.error("Failed to add referral:", err);
       alert("Failed to add referral. Please try again.");

@@ -9,7 +9,6 @@ export default function Candidate({ item, errors, loading }) {
     
     const User=sessionStorage.getItem("user")
     const parsedUser = JSON.parse(User);
-    // const token = parsedUser.token;
 
     const handleStatusChange = async (id, newStatus) => {
       setUserStatus(newStatus);
@@ -24,16 +23,14 @@ export default function Candidate({ item, errors, loading }) {
           {
             headers: {
               "Content-Type": "application/json",
-              "Authorization": `Bearer ${parsedUser.token}`, // If authentication is required
+              "Authorization": `Bearer ${parsedUser.token}`, 
             },
           }
         );
     
         if (response.status === 200) {
-          // Handle the successful status update (e.g., show a success message)
           console.log("Candidate updated successfully:", response.data);
         } else {
-          // Handle the error if the update fails
           console.error("Error updating candidate:", response.data.message);
         }
       } catch (error) {
